@@ -1,3 +1,5 @@
+import { NextSeo } from 'next-seo'
+
 import dynamic from 'next/dynamic'
 import { InfoOutline } from '@styled-icons/evaicons-outline/InfoOutline'
 
@@ -9,6 +11,7 @@ const Map = dynamic(() => import('components/Map'), { ssr: false })
 export default function HomeTemplate({ places }: MapProps) {
   return (
     <>
+      <NextSeo title="My Trips" />
       <LinkWrapper href="/about">
         <InfoOutline size={32} aria-label="About" />
       </LinkWrapper>
